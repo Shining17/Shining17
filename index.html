@@ -1,57 +1,74 @@
-<!DOCTYPE html>
-<html lang="kr">
-    <head>
-                <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="./styles.css"/>
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#!">반갑습니다. 한신입니다.</a>
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 양식 연습</title>
+</head>
+<body>
+    <h1 align="center"> 게시판 목록</h1>
+    <hr>
+    <form action="">
+        검색할 내용을 입력하세요:
+        <input type="text" name="search" list="search_list">
+        <datalist id="search_list">
+            <option value="한신" />
+            <option value="윤종석" />
+            <option value="현승엽" />
+            <option value="부정빈" />
+            <option value="신석준" />
+            <option value="안녕하세요 가입인사 드립니다." />
+            <option value="창업 해보겠습니다." />
+            <option value="그거 뭐라하더라" />
+            <option value="테니스 치실 분 있으세요?" />
+            <option value="저녁 추천해주세요" />
 
-            </div>
-        </div>
-        <!-- Header - set the background image for the header in the line below-->
-        <header class="py-5 bg-image-full" style="background-image: url('http://www.sejongpr.ac.kr/dataview/sejong_pr/temp/DEI20220114110158.jpg') ">
-            <div class="text-center my-5">
-                <img class="img-fluid rounded-circle mb-4" src="./images/프로필사진2.jpg" style="width:500px; height:500px;" alt="프로필사진" />
-                <h1 class="text-white fs-3 fw-bolder">꽃을 보는 신</h1>
-                <p class="text-white-50 mb-0">2022년 11월 어느 날 을지로 망우삼림</p>
-            </div>
-        </header>
-        <!-- Content section-->
-        <section class="py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2>약력 : 대한민국 육군 병장 만기전역, 현재 여자친구 있음</h2>
-                        <p class="lead"> 앞으로 더 열심히 채워나가 보겠습니다.</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Image element - set the background image for the header in the line below-->
-        <div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
-            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
-            <div style="height: 20rem"></div>
-        </div>
-        <!-- Content section-->
-        <section class="py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h1>한신에게 연락하기(아래사진 클릭) </h1>
-                        <a href="https://open.kakao.com/o/sSFlbUXe"><img src="./images/카카오톡연결사진.jpg" style="width:300px; height:300px;"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">모든 사진에 대한 저작권은 한신에게 있습니다.</p></div>
-        </footer>
 
-    </body>
+        </datalist>
+    </form>
+
+
+
+
+    <table border="1" style="width:100%" id="post">
+        <thead>
+            <tr>
+                <th style="width : 10%"> 번호 <button onclick="sortTD ( 0 )">▲</button><button onclick="reverseTD ( 0 )">▼</button></th>
+                <th style="width : 60%"> 제목 <button onclick="sortTD ( 1 )">▲</button><button onclick="reverseTD ( 1 )">▼</button></th>
+                <th style="width : 10%"> 글쓴이 <button onclick="sortTD ( 2 )">▲</button><button onclick="reverseTD ( 2 )">▼</button></th>
+
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>5</td>
+                <td align="left">안녕하세요 가입인사 드립니다.</td>
+                <td>한신</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td align="left">창업 해보겠습니다.</td>
+                <td>현승엽</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td align="left">테니스 치실 분 있으세요?</td>
+                <td>부정빈</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td align="left">그거 뭐라하더라</td>
+                <td>윤종석</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td align="left">저녁 추천해주세요</td>
+                <td>신석준</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+    <script src="script1.js"></script>
+</body>
 </html>
